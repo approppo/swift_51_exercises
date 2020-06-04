@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BTPeripheral" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type text here and hit the Send button below…" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="27h-Q2-hiS">
+                                <rect key="frame" x="16" y="20" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="4sL-gN-eLc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFT-Kl-ydR">
+                                <rect key="frame" x="16" y="156" width="109" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="1M7-DM-VKP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QZd-nu-F8l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTf-e5-E8B">
+                                <rect key="frame" x="258" y="156" width="101" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Inr-dD-TRc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OqK-vm-BXi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GTf-e5-E8B" firstAttribute="trailing" secondItem="27h-Q2-hiS" secondAttribute="trailing" id="2d2-p4-nFJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="27h-Q2-hiS" secondAttribute="trailing" id="3M6-5v-DfD"/>
+                            <constraint firstItem="SFT-Kl-ydR" firstAttribute="top" secondItem="27h-Q2-hiS" secondAttribute="bottom" constant="8" symbolic="YES" id="NYW-DX-7K6"/>
+                            <constraint firstItem="SFT-Kl-ydR" firstAttribute="leading" secondItem="27h-Q2-hiS" secondAttribute="leading" id="V3e-7u-q3s"/>
+                            <constraint firstItem="SFT-Kl-ydR" firstAttribute="baseline" secondItem="GTf-e5-E8B" secondAttribute="firstBaseline" id="a7S-Ll-ohg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="27h-Q2-hiS" secondAttribute="leading" id="biG-qF-CE0"/>
+                            <constraint firstItem="27h-Q2-hiS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nq1-o7-XQV"/>
+                            <constraint firstItem="SFT-Kl-ydR" firstAttribute="firstBaseline" secondItem="GTf-e5-E8B" secondAttribute="baseline" id="sfA-kw-ENv"/>
+                            <constraint firstItem="SFT-Kl-ydR" firstAttribute="top" secondItem="GTf-e5-E8B" secondAttribute="top" id="v5e-RO-2iz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GTf-e5-E8B" secondAttribute="bottom" constant="458" id="x9G-a8-7n6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="27h-Q2-hiS" id="olX-dg-wU1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+</document>

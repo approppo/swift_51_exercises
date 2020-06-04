@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tn1-LY-XbP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6zm-25-SR2">
+            <objects>
+                <tabBarController id="tn1-LY-XbP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ugT-oy-xMT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qvs-uE-1eL" kind="relationship" relationship="viewControllers" id="qPk-TE-uHR"/>
+                        <segue destination="Yzp-Fx-kJh" kind="relationship" relationship="viewControllers" id="reJ-pT-a31"/>
+                        <segue destination="7cx-uP-lRS" kind="relationship" relationship="viewControllers" id="caj-FG-5dC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIf-iU-hTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1174" y="45"/>
+        </scene>
+        <!--Patients-->
+        <scene sceneID="3TI-QO-WPv">
+            <objects>
+                <tableViewController id="EVR-M8-fTd" customClass="PatientsTableViewController" customModule="Hospital" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vjg-lA-fPB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PATIENT_CELL" textLabel="IYl-Y2-fA3" detailTextLabel="nfZ-5b-02D" style="IBUITableViewCellStyleSubtitle" id="kz1-Ad-HhI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kz1-Ad-HhI" id="dYM-QT-X5l">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IYl-Y2-fA3">
+                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nfZ-5b-02D">
+                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="1Gb-5I-oE1" kind="show" id="N16-Mn-QiF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EVR-M8-fTd" id="kmJ-90-N9h"/>
+                            <outlet property="delegate" destination="EVR-M8-fTd" id="dRf-kV-Yow"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Patients" id="B6M-nX-KPB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="O1s-oP-6sR">
+                            <connections>
+                                <action selector="addPatient:" destination="EVR-M8-fTd" id="tRv-gj-qnm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fup-dU-f3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="-493"/>
+        </scene>
+        <!--Patient-->
+        <scene sceneID="NkR-MS-0MJ">
+            <objects>
+                <viewController title="Patient" id="1Gb-5I-oE1" customClass="PatientViewController" customModule="Hospital" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifS-af-iGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="-493"/>
+        </scene>
+        <!--Patients-->
+        <scene sceneID="NZK-UG-Zmm">
+            <objects>
+                <navigationController id="qvs-uE-1eL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Patients" image="patient.png" id="OgA-uZ-zjc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jMn-su-syW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EVR-M8-fTd" kind="relationship" relationship="rootViewController" id="yC4-h6-2Um"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPB-b1-dSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244" y="-493"/>
+        </scene>
+        <!--Doctors-->
+        <scene sceneID="JwO-Y1-1AC">
+            <objects>
+                <tableViewController id="Hte-Ee-Eau" customClass="DoctorsTableViewController" customModule="Hospital" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mBo-2n-jxE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DOCTOR_CELL" textLabel="lvq-m2-6N8" detailTextLabel="6jx-jL-FY1" style="IBUITableViewCellStyleValue2" id="LlT-zC-aL1">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LlT-zC-aL1" id="lBu-y8-ZJv">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lvq-m2-6N8">
+                                            <rect key="frame" x="15" y="14" width="91" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6jx-jL-FY1">
+                                            <rect key="frame" x="112" y="14" width="35" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ChY-Ku-B2f" kind="show" id="iyf-7E-GJa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hte-Ee-Eau" id="xwD-dv-Bda"/>
+                            <outlet property="delegate" destination="Hte-Ee-Eau" id="vkD-9d-yfw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Doctors" id="4uv-uH-zm6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1X1-Wc-oEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="190"/>
+        </scene>
+        <!--Doctor-->
+        <scene sceneID="Aon-yQ-KN5">
+            <objects>
+                <viewController title="Doctor" id="ChY-Ku-B2f" customClass="DoctorViewController" customModule="Hospital" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSJ-cY-2fh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="190"/>
+        </scene>
+        <!--Beds-->
+        <scene sceneID="bLV-Bf-css">
+            <objects>
+                <tableViewController id="tVG-yc-zc8" customClass="BedsTableViewController" customModule="Hospital" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="erA-cT-u5j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BED_CELL" textLabel="f0g-RI-JXn" detailTextLabel="BRp-7f-S7a" style="IBUITableViewCellStyleValue1" id="8Pi-DB-67s">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Pi-DB-67s" id="iSf-Zw-APQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f0g-RI-JXn">
+                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BRp-7f-S7a">
+                                            <rect key="frame" x="296" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hJF-jp-mut" kind="show" id="qKn-rj-RlT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tVG-yc-zc8" id="n0m-iC-TVS"/>
+                            <outlet property="delegate" destination="tVG-yc-zc8" id="NDe-B1-CXI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Beds" id="fjl-9k-DFo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CY-tu-fRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="922"/>
+        </scene>
+        <!--Bed-->
+        <scene sceneID="nrx-WT-1o5">
+            <objects>
+                <viewController title="Bed" id="hJF-jp-mut" customClass="BedViewController" customModule="Hospital" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHI-aW-jJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="922"/>
+        </scene>
+        <!--Beds-->
+        <scene sceneID="oj4-GE-4WC">
+            <objects>
+                <navigationController id="7cx-uP-lRS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Beds" image="bed.png" id="PPc-If-85O"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fGm-AZ-Hwu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tVG-yc-zc8" kind="relationship" relationship="rootViewController" id="lh7-AN-KuJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWP-53-uca" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244" y="922"/>
+        </scene>
+        <!--Doctors-->
+        <scene sceneID="Rrl-pV-8u8">
+            <objects>
+                <navigationController id="Yzp-Fx-kJh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Doctors" image="doctor.png" id="Mw7-eb-sZw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yxL-9S-kMG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Hte-Ee-Eau" kind="relationship" relationship="rootViewController" id="AhG-0E-D3Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQq-IE-Lu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244" y="191"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bed.png" width="28" height="22"/>
+        <image name="doctor.png" width="28" height="26"/>
+        <image name="patient.png" width="28" height="28"/>
+    </resources>
+</document>

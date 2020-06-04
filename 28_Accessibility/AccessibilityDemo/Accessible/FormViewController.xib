@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormViewController" customModule="Accessible" customModuleProvider="target">
+            <connections>
+                <outlet property="addressField" destination="pLj-KR-SIq" id="wN2-f7-GON"/>
+                <outlet property="addressLabel" destination="J4a-od-wWE" id="L62-yD-RG1"/>
+                <outlet property="ageField" destination="Hdt-6m-XiP" id="TfX-ns-0Ld"/>
+                <outlet property="ageLabel" destination="db3-03-aKR" id="nAp-2Y-d5P"/>
+                <outlet property="cityField" destination="XZE-vP-Kgu" id="8UV-AA-cSP"/>
+                <outlet property="cityLabel" destination="Ti8-iw-NKM" id="Kld-C8-Kj9"/>
+                <outlet property="countryField" destination="CK8-Vo-wqh" id="nOh-G8-1Rp"/>
+                <outlet property="countryLabel" destination="K8w-pT-7mO" id="6Bg-U7-zve"/>
+                <outlet property="errorLabel" destination="IgX-4x-Sq4" id="piH-Zy-ruu"/>
+                <outlet property="favoriteLabel" destination="7vj-dH-Hpm" id="amc-Ve-xhS"/>
+                <outlet property="favoriteSwitch" destination="uUf-ue-CJX" id="f4f-zW-6Qx"/>
+                <outlet property="nameField" destination="7gg-0y-iQ0" id="mC4-F8-4yc"/>
+                <outlet property="nameLabel" destination="0oA-8h-MzE" id="y3g-b2-TnO"/>
+                <outlet property="saveButton" destination="cTO-9c-5ZR" id="B9h-49-OkY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zipField" destination="mv2-eD-8dW" id="pXx-9W-RNR"/>
+                <outlet property="zipLabel" destination="Qtp-sK-DQL" id="4rf-c4-NPh"/>
+                <outletCollection property="fields" destination="7gg-0y-iQ0" collectionClass="NSMutableArray" id="pfe-Bs-tL3"/>
+                <outletCollection property="fields" destination="pLj-KR-SIq" collectionClass="NSMutableArray" id="pQj-OL-aov"/>
+                <outletCollection property="fields" destination="Hdt-6m-XiP" collectionClass="NSMutableArray" id="i5T-T0-TFK"/>
+                <outletCollection property="fields" destination="mv2-eD-8dW" collectionClass="NSMutableArray" id="v6C-05-iV9"/>
+                <outletCollection property="fields" destination="XZE-vP-Kgu" collectionClass="NSMutableArray" id="nCL-h6-V8C"/>
+                <outletCollection property="fields" destination="CK8-Vo-wqh" collectionClass="NSMutableArray" id="bdM-XE-QHE"/>
+                <outletCollection property="labels" destination="0oA-8h-MzE" collectionClass="NSMutableArray" id="uIm-UR-6nK"/>
+                <outletCollection property="labels" destination="J4a-od-wWE" collectionClass="NSMutableArray" id="m9R-pz-Uv2"/>
+                <outletCollection property="labels" destination="db3-03-aKR" collectionClass="NSMutableArray" id="5z6-wg-yiC"/>
+                <outletCollection property="labels" destination="Qtp-sK-DQL" collectionClass="NSMutableArray" id="e5u-dS-zai"/>
+                <outletCollection property="labels" destination="Ti8-iw-NKM" collectionClass="NSMutableArray" id="peB-EW-Ipu"/>
+                <outletCollection property="labels" destination="K8w-pT-7mO" collectionClass="NSMutableArray" id="zbN-V4-YL5"/>
+                <outletCollection property="labels" destination="7vj-dH-Hpm" collectionClass="NSMutableArray" id="zhl-bY-nF0"/>
+                <outletCollection property="labels" destination="IgX-4x-Sq4" collectionClass="NSMutableArray" id="TPk-cK-b0m"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oA-8h-MzE">
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-0y-iQ0">
+                    <accessibility key="accessibilityConfiguration" label="Customer Name Field"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="m02-WR-L7u"/>
+                        <constraint firstAttribute="width" constant="237" id="y30-ik-ep9"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="mDd-0x-eB9"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4a-od-wWE">
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLj-KR-SIq">
+                    <accessibility key="accessibilityConfiguration" label="Customer Address Field"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="c5j-yf-pgS"/>
+                        <constraint firstAttribute="width" constant="237" id="ewN-02-OPI"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="VX7-aG-Jyj"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db3-03-aKR">
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hdt-6m-XiP">
+                    <accessibility key="accessibilityConfiguration" label="Customer Age Field"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7ft-g2-ARN"/>
+                        <constraint firstAttribute="width" constant="237" id="PXJ-bv-aoJ"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="UX1-6t-ySL"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtp-sK-DQL">
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mv2-eD-8dW">
+                    <accessibility key="accessibilityConfiguration" label="Customer ZIP Field"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="01D-ma-FaW"/>
+                        <constraint firstAttribute="width" constant="237" id="tA6-7a-fKB"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="0dj-27-qPX"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ti8-iw-NKM">
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZE-vP-Kgu">
+                    <accessibility key="accessibilityConfiguration" label="Customer City Field"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="237" id="1MX-yM-VUM"/>
+                        <constraint firstAttribute="height" constant="30" id="69w-Ff-bLR"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Cp9-dK-1V2"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8w-pT-7mO">
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CK8-Vo-wqh">
+                    <accessibility key="accessibilityConfiguration" label="Customer Country Field"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6Ja-iO-9gI"/>
+                        <constraint firstAttribute="width" constant="237" id="wRc-cu-xRm"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="gdJ-LN-7xa"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vj-dH-Hpm">
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error: fields cannot be empty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgX-4x-Sq4">
+                    <frame key="frameInset" minX="156" minY="373" width="210.5" height="19.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration" label="Error label"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTO-9c-5ZR">
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="save:" destination="-1" eventType="touchUpInside" id="UTH-Sn-4iu"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUf-ue-CJX" customClass="FavoriteControl" customModule="Accessible" customModuleProvider="target">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5ea-x7-CdI"/>
+                        <constraint firstAttribute="width" constant="44" id="KXt-Dy-9ie"/>
+                    </constraints>
+                    <connections>
+                        <action selector="favoriteTouched:" destination="-1" eventType="valueChanged" id="zSm-nT-Dl8"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="mv2-eD-8dW" firstAttribute="baseline" secondItem="Qtp-sK-DQL" secondAttribute="baseline" id="1bW-so-Xc8"/>
+                <constraint firstItem="J4a-od-wWE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="1i4-Br-6IN"/>
+                <constraint firstItem="mv2-eD-8dW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="122" id="3jG-Hc-qHF"/>
+                <constraint firstItem="cTO-9c-5ZR" firstAttribute="top" secondItem="7vj-dH-Hpm" secondAttribute="bottom" constant="7" id="4kR-wj-6k1"/>
+                <constraint firstItem="7gg-0y-iQ0" firstAttribute="baseline" secondItem="0oA-8h-MzE" secondAttribute="baseline" id="5ly-HO-f5X"/>
+                <constraint firstItem="0oA-8h-MzE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="81" id="6We-a3-vhy"/>
+                <constraint firstItem="CK8-Vo-wqh" firstAttribute="baseline" secondItem="K8w-pT-7mO" secondAttribute="baseline" id="B5U-25-dou"/>
+                <constraint firstItem="Qtp-sK-DQL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="CHY-ey-nz9"/>
+                <constraint firstItem="Hdt-6m-XiP" firstAttribute="baseline" secondItem="db3-03-aKR" secondAttribute="baseline" id="DUN-JO-mPK"/>
+                <constraint firstItem="7gg-0y-iQ0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="76" id="EhZ-lQ-udb"/>
+                <constraint firstItem="XZE-vP-Kgu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="122" id="Epw-jK-4vV"/>
+                <constraint firstItem="db3-03-aKR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="IUT-S7-32A"/>
+                <constraint firstItem="7vj-dH-Hpm" firstAttribute="top" secondItem="K8w-pT-7mO" secondAttribute="bottom" constant="47" id="Iwk-mN-x0z"/>
+                <constraint firstItem="7vj-dH-Hpm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="JfI-ed-1f6"/>
+                <constraint firstItem="pLj-KR-SIq" firstAttribute="baseline" secondItem="J4a-od-wWE" secondAttribute="baseline" id="Lga-Ir-UWL"/>
+                <constraint firstItem="pLj-KR-SIq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="122" id="Nbe-y4-QCW"/>
+                <constraint firstItem="K8w-pT-7mO" firstAttribute="top" secondItem="Ti8-iw-NKM" secondAttribute="bottom" constant="17" id="Pg5-Ff-Knr"/>
+                <constraint firstItem="db3-03-aKR" firstAttribute="top" secondItem="J4a-od-wWE" secondAttribute="bottom" constant="17" id="RQg-O0-pQs"/>
+                <constraint firstItem="CK8-Vo-wqh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="122" id="S8N-j0-Jhe"/>
+                <constraint firstItem="cTO-9c-5ZR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="SHe-Ef-GF9"/>
+                <constraint firstItem="Ti8-iw-NKM" firstAttribute="top" secondItem="Qtp-sK-DQL" secondAttribute="bottom" constant="17" id="STU-bE-QiF"/>
+                <constraint firstItem="7gg-0y-iQ0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="122" id="WZU-ba-aet"/>
+                <constraint firstItem="J4a-od-wWE" firstAttribute="top" secondItem="0oA-8h-MzE" secondAttribute="bottom" constant="17" id="aaA-DH-Sdy"/>
+                <constraint firstItem="XZE-vP-Kgu" firstAttribute="baseline" secondItem="Ti8-iw-NKM" secondAttribute="baseline" id="adL-gN-yJe"/>
+                <constraint firstItem="Hdt-6m-XiP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="122" id="ajM-96-cSV"/>
+                <constraint firstItem="K8w-pT-7mO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ffz-f9-eFn"/>
+                <constraint firstItem="Qtp-sK-DQL" firstAttribute="top" secondItem="db3-03-aKR" secondAttribute="bottom" constant="17" id="jN8-cx-88g"/>
+                <constraint firstItem="0oA-8h-MzE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="jun-Yu-Hbg"/>
+                <constraint firstItem="Ti8-iw-NKM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="oLa-9H-Ewm"/>
+                <constraint firstItem="uUf-ue-CJX" firstAttribute="baseline" secondItem="7vj-dH-Hpm" secondAttribute="baseline" id="scc-GF-tbh"/>
+                <constraint firstItem="uUf-ue-CJX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="122" id="tWb-Ih-eoR"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

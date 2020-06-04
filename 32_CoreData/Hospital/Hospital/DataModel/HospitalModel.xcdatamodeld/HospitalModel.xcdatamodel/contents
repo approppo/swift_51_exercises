@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bed" representedClassName="Bed" syncable="YES" codeGenerationType="class">
+        <attribute name="floor" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="room" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="patient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="bed" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <entity name="Doctor" representedClassName="Doctor" syncable="YES" codeGenerationType="class">
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
+        <attribute name="speciality" attributeType="String" syncable="YES"/>
+        <relationship name="patients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Patient" inverseName="doctor" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <entity name="Patient" representedClassName="Patient" syncable="YES" codeGenerationType="class">
+        <attribute name="admissionDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bed" maxCount="1" deletionRule="Nullify" destinationEntity="Bed" inverseName="patient" inverseEntity="Bed" syncable="YES"/>
+        <relationship name="doctor" maxCount="1" deletionRule="Nullify" destinationEntity="Doctor" inverseName="patients" inverseEntity="Doctor" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bed" positionX="205" positionY="-144" width="128" height="88"/>
+        <element name="Doctor" positionX="178" positionY="120" width="128" height="103"/>
+        <element name="Patient" positionX="-63" positionY="-18" width="128" height="133"/>
+    </elements>
+</model>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BjF-Oq-28s">
+                                <rect key="frame" x="0.0" y="81" width="375" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFL-3b-EYn">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="R9Q-zO-Sb4">
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" id="Y6Y-yq-I9N"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4iP-UK-d6d"/>
+                                    <barButtonItem systemItem="fastForward" id="42L-hE-aCt">
+                                        <connections>
+                                            <action selector="forward:" destination="BYZ-38-t0r" id="n1U-oH-uB9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IKw-f2-Ijr"/>
+                                    <barButtonItem systemItem="stop" id="bcC-4D-QFm">
+                                        <connections>
+                                            <action selector="stopLoading:" destination="BYZ-38-t0r" id="RZA-e0-zzU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UZZ-cA-OOl"/>
+                                    <barButtonItem systemItem="refresh" id="NUN-m1-kTI">
+                                        <connections>
+                                            <action selector="refresh:" destination="BYZ-38-t0r" id="6aF-gd-B0U"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZy-m1-mnd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://www.approppo.ch/" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2yl-TP-cQ7">
+                                        <rect key="frame" x="8" y="36" width="321" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="sBK-u7-RxK"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bb-AI-VYq">
+                                        <rect key="frame" x="337" y="36" width="30" height="30"/>
+                                        <state key="normal" title="Go"/>
+                                        <connections>
+                                            <action selector="go:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bQv-VS-0Wd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="1Bb-AI-VYq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MZy-m1-mnd" secondAttribute="leading" constant="20" symbolic="YES" id="0P8-X7-hYK"/>
+                                    <constraint firstItem="2yl-TP-cQ7" firstAttribute="top" secondItem="MZy-m1-mnd" secondAttribute="top" constant="36" id="463-2V-MVp"/>
+                                    <constraint firstItem="2yl-TP-cQ7" firstAttribute="leading" secondItem="MZy-m1-mnd" secondAttribute="leading" constant="8" id="8Q1-XY-RE5"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Bb-AI-VYq" secondAttribute="trailing" constant="8" id="XLS-pf-rU5"/>
+                                    <constraint firstAttribute="trailing" secondItem="2yl-TP-cQ7" secondAttribute="trailing" constant="46" id="fKz-aE-UxD"/>
+                                    <constraint firstItem="1Bb-AI-VYq" firstAttribute="top" secondItem="MZy-m1-mnd" secondAttribute="top" constant="36" id="qsj-Mb-YNv"/>
+                                    <constraint firstAttribute="height" constant="73" id="s8a-lZ-he3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="BjF-Oq-28s" secondAttribute="trailing" constant="-16" id="2O1-4n-ycU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MZy-m1-mnd" secondAttribute="trailing" constant="-16" id="CQb-MK-dDB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HFL-3b-EYn" secondAttribute="bottom" id="MX6-XI-GKD"/>
+                            <constraint firstItem="MZy-m1-mnd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Nse-g8-vdQ"/>
+                            <constraint firstItem="MZy-m1-mnd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Scf-vA-UjW"/>
+                            <constraint firstItem="BjF-Oq-28s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Uvq-ln-Qxz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HFL-3b-EYn" secondAttribute="trailing" constant="-16" id="WGl-rl-HrF"/>
+                            <constraint firstItem="HFL-3b-EYn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="d7t-Rn-hbj"/>
+                            <constraint firstItem="BjF-Oq-28s" firstAttribute="top" secondItem="MZy-m1-mnd" secondAttribute="bottom" constant="8" id="kCR-AP-EFn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BjF-Oq-28s" secondAttribute="bottom" constant="53" id="xX3-xL-Yya"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="R9Q-zO-Sb4" id="WPN-Tm-5Yb"/>
+                        <outlet property="forwardButton" destination="42L-hE-aCt" id="645-8O-Hx3"/>
+                        <outlet property="goButton" destination="1Bb-AI-VYq" id="UKX-q1-zmN"/>
+                        <outlet property="holderView" destination="BjF-Oq-28s" id="eCz-12-Rtj"/>
+                        <outlet property="locationField" destination="2yl-TP-cQ7" id="ykX-Ah-wd8"/>
+                        <outlet property="refreshButton" destination="NUN-m1-kTI" id="jvE-Id-Ch7"/>
+                        <outlet property="stopLoadingButton" destination="bcC-4D-QFm" id="Y5Z-dl-O6Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="128.18590704647679"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,20 @@
+{
+    "players": [
+        {
+            "first_name": "Timea",
+            "last_name": "Bacsinszki"
+        },
+        {
+            "first_name": "Martina",
+            "last_name": "Hingis"
+        },
+        {
+            "first_name": "Roger",
+            "last_name": "Federer"
+        },
+        {
+            "first_name": "Stan",
+            "last_name": "Wawrinka"
+        }
+    ]
+}
